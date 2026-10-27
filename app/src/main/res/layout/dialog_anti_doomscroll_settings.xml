@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FFF9F5"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🛡️ Anti-Doomscrolling Shield"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="12dp"/>
+
+    <Switch
+        android:id="@+id/switchShield"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enable Break Reminder Shield"
+        android:textSize="15sp"
+        android:textColor="#4A4A4A"
+        android:paddingBottom="16dp"
+        android:minHeight="48dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Time Limit before Interruption:"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#555555"
+        android:paddingBottom="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupLimits"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="16dp">
+
+        <RadioButton
+            android:id="@+id/rb5m"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5 Minutes (Quick Break)"
+            android:textColor="#4A4A4A"
+            android:minHeight="48dp"/>
+
+        <RadioButton
+            android:id="@+id/rb10m"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10 Minutes"
+            android:textColor="#4A4A4A"
+            android:minHeight="48dp"/>
+
+        <RadioButton
+            android:id="@+id/rb15m"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="15 Minutes"
+            android:textColor="#4A4A4A"
+            android:minHeight="48dp"/>
+
+        <RadioButton
+            android:id="@+id/rb30m"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="30 Minutes (Recommended)"
+            android:textColor="#4A4A4A"
+            android:minHeight="48dp"/>
+
+        <RadioButton
+            android:id="@+id/rb60m"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="60 Minutes (1 Hour)"
+            android:textColor="#4A4A4A"
+            android:minHeight="48dp"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnSaveShield"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/custom_button_bg"
+        android:text="Save &amp; Activate 🌿"
+        android:textColor="#333333"
+        android:textStyle="bold"
+        android:textAllCaps="false"/>
+
+</LinearLayout>

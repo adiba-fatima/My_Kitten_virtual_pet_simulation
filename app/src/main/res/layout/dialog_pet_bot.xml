@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:orientation="vertical"
+    android:background="#FFF9F5"
+    android:padding="16dp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="12dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/cat"
+            android:contentDescription="Bot Avatar"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dr. Kitty 🩺🐾"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#333333"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your AI Pet Care & Vet Assistant"
+                android:textSize="12sp"
+                android:textColor="#777777"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E0D0C0"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Chat Conversation ScrollView -->
+    <ScrollView
+        android:id="@+id/chatScroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:paddingBottom="8dp">
+
+        <LinearLayout
+            android:id="@+id/chatContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <!-- Welcome Message from Bot -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_card_bg"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp"
+                android:text="Meow! I'm Dr. Kitty. Ask me anything about cat care, diet, sleep, or behavior! 🐾"
+                android:textColor="#333333"
+                android:textSize="14sp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Quick Question Chips -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:paddingBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnQ1"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/custom_button_bg"
+                android:text="🐟 What to feed?"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btnQ2"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/custom_button_bg"
+                android:text="💤 Why sleep so much?"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btnQ3"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/custom_button_bg"
+                android:text="❤️ Why do cats purr?"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btnQ4"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:background="@drawable/custom_button_bg"
+                android:text="🐾 Why knead?"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:textAllCaps="false"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Input Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/edtUserMessage"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/item_card_bg"
+            android:hint="Ask a question about cats..."
+            android:paddingHorizontal="12dp"
+            android:textSize="14sp"
+            android:inputType="text"/>
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="80dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/custom_button_bg"
+            android:text="Ask"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
+</LinearLayout>

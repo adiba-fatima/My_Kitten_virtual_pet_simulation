@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_200"
+    android:padding="16dp">
+
+    <!-- Pet Image -->
+    <ImageView
+        android:id="@+id/petImage"
+        android:layout_width="230dp"
+        android:layout_height="137dp"
+        android:src="@drawable/pet_happy"
+        app:layout_constraintBottom_toTopOf="@+id/hungerBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <!-- Hunger Row -->
+    <TextView
+        android:id="@+id/hungerLabel"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="Hunger"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/hungerBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/hungerBar" />
+
+    <ProgressBar
+        android:id="@+id/hungerBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:max="100"
+        android:progress="50"
+        app:layout_constraintBottom_toTopOf="@+id/happinessBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/hungerLabel"
+        app:layout_constraintTop_toBottomOf="@id/petImage" />
+
+    <!-- Happiness Row -->
+    <TextView
+        android:id="@+id/happinessLabel"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="Happiness"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/happinessBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/happinessBar" />
+
+    <ProgressBar
+        android:id="@+id/happinessBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:max="100"
+        android:progress="70"
+        app:layout_constraintBottom_toTopOf="@+id/energyBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/happinessLabel"
+        app:layout_constraintTop_toBottomOf="@id/hungerBar" />
+
+    <!-- Energy Row -->
+    <TextView
+        android:id="@+id/energyLabel"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="Energy"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/energyBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/energyBar" />
+
+    <ProgressBar
+        android:id="@+id/energyBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:max="100"
+        android:progress="30"
+        app:layout_constraintBottom_toTopOf="@+id/feedButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/energyLabel"
+        app:layout_constraintTop_toBottomOf="@id/happinessBar" />
+
+    <!-- Action Buttons Row -->
+    <Button
+        android:id="@+id/feedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Feed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/playButton"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/energyBar" />
+
+    <Button
+        android:id="@+id/playButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play"
+        app:layout_constraintBottom_toBottomOf="@id/feedButton"
+        app:layout_constraintEnd_toStartOf="@id/sleepButton"
+        app:layout_constraintStart_toEndOf="@id/feedButton"
+        app:layout_constraintTop_toTopOf="@id/feedButton" />
+
+    <Button
+        android:id="@+id/sleepButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sleep"
+        app:layout_constraintBottom_toBottomOf="@id/feedButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/playButton"
+        app:layout_constraintTop_toTopOf="@id/feedButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
